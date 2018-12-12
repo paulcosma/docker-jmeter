@@ -1,0 +1,10 @@
+.dockerignore
+.git
+.gitignore
+.idea
+Dockerfile
+*.Dockerfile
+README.md
+
+# Artifacts that will be built during image creation.
+# This should contain all files created during build

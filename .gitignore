@@ -1,0 +1,8 @@
+# IntelliJ project files
+*.iml
+.idea/
+
+# Performance test results from JMeter
+*.jtl
+*.csv
+*.log
