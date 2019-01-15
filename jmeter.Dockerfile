@@ -1,7 +1,7 @@
 # JMeter BASE image
 # Use Java 8 slim JRE
 FROM jenkins/ssh-slave as jmeter-base
-LABEL maintainer="cosmap@mediamarktsaturn.com"
+LABEL maintainer="paulcosma@gmail.com"
 
 # JMeter version
 ARG JMETER_VERSION=5.0
@@ -49,7 +49,7 @@ COPY --from=jenkinsci/ssh-slave /usr/local/bin/setup-sshd /usr/local/bin/setup-s
 # JMeter MASTER image
 # Use jmeter-base image
 FROM jmeter-base as jmeter-master
-LABEL maintainer="cosmap@mediamarktsaturn.com"
+LABEL maintainer="paulcosma@gmail.com"
 
 # Ports to be exposed from the container for JMeter Master
 EXPOSE 60000
@@ -68,7 +68,7 @@ ENTRYPOINT ["setup-sshd"]
 # Use jmeter-base image
 # ToDo use a supervisord for slave image to start both, ssh and jmeter
 #FROM jmeter-base as jmeter-slave
-#LABEL maintainer="cosmap@mediamarktsaturn.com"
+#LABEL maintainer="paulcosma@gmail.com"
 
 # Ports to be exposed from the container for JMeter Slaves/Server
 #EXPOSE 1099 50000
